@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:id="@+id/newslayout"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:elevation="20dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:background="@color/colorAccent"
+                android:layout_width="match_parent"
+
+                android:layout_height="50dp"
+                app:cardCornerRadius="10dp">
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                 android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/newsDate"
+                    android:text="24-12-2019"/>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:id="@+id/newsImage"
+                android:src="@drawable/newsimage"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/newsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="19sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:layout_below="@id/newsImage"
+                />
+
+            <TextView
+                android:id="@+id/newsAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Author&amp;"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/ic_author"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:layout_below="@id/newsTitle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/newsDesc"
+                android:text="News Desc Here.."
+                android:layout_below="@id/newsAuthor"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
